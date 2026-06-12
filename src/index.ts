@@ -1,10 +1,12 @@
+import fs from 'fs'
+
 interface Task {
     id: number
     title: string
     completed: boolean
 }
 
-let tasks: Task[] = [];
+let tasks: Task[] = [JSON.parse(fs.readFileSync('tasks.json'))]
 
 function addTask(title: string): void {
     let newTask: Task = {
