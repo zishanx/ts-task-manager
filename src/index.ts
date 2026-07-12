@@ -27,10 +27,6 @@ function completeTask(id: number): void {
     saveTasks()
 }
 
-function deleteTask(id: number): void {
-    tasks = tasks.filter(item => item.id !== id);
-    saveTasks()
-}
 
 function listTask(): void {
     tasks.forEach(item => console.log(item))
